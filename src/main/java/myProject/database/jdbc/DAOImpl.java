@@ -60,7 +60,7 @@ public class DAOImpl {
         try {
             return DriverManager.getConnection(dbUrl,userName,password);
         } catch (SQLException e) {
-            System.out.println("Exciption while getting connection to database")
+            System.out.println("Exciption while getting connection to database");
             e.printStackTrace();
             throw new DBException(e);
         }
