@@ -1,0 +1,33 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ALLOW_INVALID_DATES';
+
+CREATE SCHEMA IF NOT EXISTS `mytestdatabase` DEFAULT CHARACTER SET utf8 ;
+USE `mytestdatabase` ;
+
+CREATE TABLE if not EXISTS `mytestdatabase`.`Profile` (
+  `profileId` INT(10) NOT NULL AUTO_INCREMENT,
+  `firstName` VARCHAR(20) NOT NULL,
+  `familyName` VARCHAR(20) NOT NULL,
+  `birthDate` DATE,
+  `characterTrait1` VARCHAR(80),
+  `characterTrait2` VARCHAR(80),
+  `characterTrait3` VARCHAR(80),
+  `description` VARCHAR(200),
+  PRIMARY KEY (`profileId`)
+
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 1002;
+
+CREATE TABLE if not EXISTS `ProfileNotes` (
+  `noteId`  INT(15) NOT NULL AUTO_INCREMENT,
+  `noteText` VARCHAR(200),
+  `noteDate` DATE,
+  PRIMARY KEY (`noteId`)
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 100;
+
+
+DESCRIBE ProfileNotes;

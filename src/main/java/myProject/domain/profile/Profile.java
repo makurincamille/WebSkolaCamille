@@ -20,6 +20,8 @@ public class Profile {
     private LocalDate birthDate;
     private String characterTrait1;
     private String characterTrait2;
+    private String characterTrait3;
+    private String description;
 
 
     public Long getProfileId() {
@@ -86,8 +88,7 @@ public class Profile {
         this.description = description;
     }
 
-    private String characterTrait3;
-    private String description;
+
 
 
 }
